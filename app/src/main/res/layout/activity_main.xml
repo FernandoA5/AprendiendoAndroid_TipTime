@@ -59,7 +59,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text="@string/redondear_propina"
+        android:text="@string/redondear_propina_hacia_arriba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tip_options"
@@ -78,7 +78,7 @@
         android:id="@+id/tip_result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/propina_total"
+        tools:text="Tip Amount: $10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button" />
 
