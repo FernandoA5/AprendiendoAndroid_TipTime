@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ok_15" />
-        >
+
     </RadioGroup>
 
     <Switch
@@ -81,5 +81,13 @@
         tools:text="Tip Amount: $10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button" />
+    <TextView
+        android:id="@+id/cuenta_aceleracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip_result"
+        android:text="@string/n_mero"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,15 @@
 package com.example.tiptime
 
+import android.content.Context
+import android.hardware.Sensor
+import android.hardware.SensorManager
+//
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tiptime.databinding.ActivityMainBinding
+import java.io.File
 import java.text.NumberFormat
+import kotlin.math.ceil
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,9 +22,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
+
         binding.calculateButton.setOnClickListener { calculateTip() }
     }
+   
     private fun calculateTip() {
+
+
         val stringInTextField = binding.costOfService.text.toString()
         val cost = stringInTextField.toDoubleOrNull()
         if (cost == null) {
@@ -32,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
         var tip = tipPercentage * cost
         if (binding.roundUpSwitch.isChecked) {
-            tip = kotlin.math.ceil(tip)
+            tip = ceil(tip)
         }
 
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
